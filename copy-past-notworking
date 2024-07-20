@@ -6,3 +6,15 @@ You can copy/paste with Ctrl+Shift+c/v
 COPY -> CTRL+INSERT or CTRL+FN+INSERT
 
 PASTE -> SHIFT+CTRL+V
+
+
+#Helm Install
+
+https://medium.com/@ranjeetjangra/install-helm-on-centos-7-746951f8a8ee
+
+curl -o helm-v3.10.3-linux-amd64.tar.gz https://get.helm.sh/helm-v3.10.3-linux-amd64.tar.gz
+tar -zxvf helm-v3.10.3-linux-amd64.tar.gz
+mv linux-amd64/helm /usr/local/bin/helm
+ll /usr/local/bin/helm
+helm version --template='Version: {{.Version}}'
+helm version
