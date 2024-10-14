@@ -7,3 +7,7 @@ Login with Docker or Github
 
 kubeadm init --apiserver-advertise-address $(hostname -i) --pod-network-cidr 10.5.0.0/16
 kubectl apply -f https://raw.githubusercontent.com/cloudnativelabs/kube-router/master/daemonset/kubeadm-kuberouter.yaml
+
+###Untaint the node
+kubectl describe node node1 | grep Taints
+kubectl taint node node1 node-role.kubernetes.io/control-plane:NoSchedule
