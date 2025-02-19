@@ -10,4 +10,4 @@ kubectl apply -f https://raw.githubusercontent.com/cloudnativelabs/kube-router/m
 
 ###Untaint the node
 kubectl describe node node1 | grep Taints
-kubectl taint node node1 node-role.kubernetes.io/control-plane:NoSchedule
+kubectl taint node node1 node-role.kubernetes.io/control-plane:NoSchedule-
